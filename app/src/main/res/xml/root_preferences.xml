@@ -22,12 +22,6 @@
             android:singleLine="true"
             android:summary="Your username"
             android:title="Login" />
-        <Preference
-            android:title="Log in via Nextcloud app"
-            android:summary="Use on-device Nextcloud account"
-            android:id="@+id/login_sso"
-            android:key="login_sso"
-            />
     </PreferenceCategory>
     <PreferenceCategory android:title="Connection">
         <SwitchPreference
@@ -45,17 +39,12 @@
             android:key="allow_metered"
             android:summary="Allows networks which are metered"
             android:title="Allow metered networks" />
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="enable_polling"
-            android:summary="Enables polling notifications"
-            android:title="Enable service" />
         <nl.invissvenska.numberpickerpreference.NumberDialogPreference
             android:key="polling_interval"
             android:title="Polling interval"
-            android:defaultValue="10"
+            android:defaultValue="3"
             app:numberPickerPreference_minValue="1"
-            app:numberPickerPreference_maxValue="899"
+            app:numberPickerPreference_maxValue="600"
             app:numberPickerPreference_unitText=" seconds" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Status">
@@ -74,9 +63,9 @@
     <PreferenceCategory android:title="Others">
         <Preference
             android:title="Credits"
-            android:summary="See people who contributed to this project"
-            android:id="@+id/credits"
-            android:key="credits"
+            android:summary="See opensource libraries used in this app"
+            android:id="@+id/oss_licenses"
+            android:key="oss_licenses"
            />
         <Preference
         android:title="Donate"
